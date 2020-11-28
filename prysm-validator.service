@@ -8,6 +8,6 @@ User=prysm-validator
 Group=prysm-validator
 Restart=always
 RestartSec=5
-ExecStart=/usr/local/bin/validator --pyrmont --datadir /var/lib/prysm/validator --wallet-dir /var/lib/prysm/validator --wallet-password-file /var/lib/prysm/validator/wallet_password.txt --graffiti "Maharacha" --accept-terms-of-use
+ExecStart=/usr/local/bin/validator --pyrmont --datadir /var/lib/prysm/validator --wallet-dir /var/lib/prysm/validator --wallet-password-file /var/lib/prysm/validator/wallet_password.txt --accept-terms-of-use
 [Install]
 WantedBy=multi-user.target
