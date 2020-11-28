@@ -15,11 +15,3 @@ Scripts for setting up beacon and validator with prysm.
 `sudo journalctl -fu prysm-beaconchain.service`
 
 `beaconchain` can be replaced with `validator` for the validator service.  
-
-
-## Run on main-net
-By default this runs on `pyrmont` test-net.  
-To run on main-net, remove all `pyrmont`-flags.  
-In repository directory, run  
-`grep . -rnwe pyrmont`  
-to find where they are.
