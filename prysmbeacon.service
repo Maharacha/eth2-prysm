@@ -8,6 +8,6 @@ User=prysmbeacon
 Group=prysmbeacon
 Restart=always
 RestartSec=5
-ExecStart=/usr/local/bin/beacon-chain --pyrmont --datadir=/var/lib/prysm/beacon --http-web3provider=http://127.0.0.1:8545 --accept-terms-of-use
+ExecStart=/usr/local/bin/beacon-chain --datadir=/var/lib/prysm/beacon --http-web3provider=http://127.0.0.1:8545 --accept-terms-of-use
 [Install]
 WantedBy=multi-user.target
