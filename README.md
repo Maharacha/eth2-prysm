@@ -14,4 +14,4 @@ Scripts for setting up beacon and validator with prysm.
 `sudo service prysmbeacon status/stop/start/restart`  
 `sudo journalctl -fu prysmbeacon.service`
 
-`beaconchain` can be replaced with `validator` for the validator service.  
+`prysmbeacon` can be replaced with `prysmvalidator` for the validator service.  
