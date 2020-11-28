@@ -1,0 +1,13 @@
+[Unit]
+Description=Prysm Eth2 Client Beacon Node
+Wants=network-online.target
+After=network-online.target
+[Service]
+Type=simple
+User=prysmbeacon
+Group=prysmbeacon
+Restart=always
+RestartSec=5
+ExecStart=/usr/local/bin/beacon-chain --pyrmont --datadir=/var/lib/prysm/beacon --http-web3provider=http://127.0.0.1:8545 --accept-terms-of-use
+[Install]
+WantedBy=multi-user.target

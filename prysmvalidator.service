@@ -1,11 +1,12 @@
 [Unit]
-Description=Validator
+Description=Prysm Eth2 Validator Client
 Wants=network-online.target
 After=network-online.target
+BindsTo=prysmbeacon.service
 [Service]
 Type=simple
-User=prysm-validator
-Group=prysm-validator
+User=prysmvalidator
+Group=prysmvalidator
 Restart=always
 RestartSec=5
 ExecStart=/usr/local/bin/validator --pyrmont --datadir /var/lib/prysm/validator --wallet-dir /var/lib/prysm/validator --wallet-password-file /var/lib/prysm/validator/wallet_password.txt --accept-terms-of-use
