@@ -7,8 +7,6 @@ BindsTo=prysmbeacon.service
 Type=simple
 User=prysmvalidator
 Group=prysmvalidator
-Restart=always
-RestartSec=5
 ExecStart=/usr/local/bin/validator --datadir /var/lib/prysm/validator --wallet-dir /var/lib/prysm/validator --wallet-password-file /var/lib/prysm/validator/wallet_password.txt --accept-terms-of-use
 [Install]
 WantedBy=multi-user.target

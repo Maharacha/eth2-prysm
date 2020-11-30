@@ -31,7 +31,11 @@ sudo cp dist/validator*amd64 /usr/local/bin/validator
 # Create(copy) and start services
 sudo cp *.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl start prysmbeacon
-sudo systemctl start prysmvalidator
-sudo systemctl enable prysmbeacon
-sudo systemctl enable prysmvalidator
+
+# Don't automatically start the service, since one might want to copy a backup validator directory containing slashing protection history (.db).
+#sudo systemctl start prysmbeacon
+#sudo systemctl start prysmvalidator
+
+# Don't want service to start on boot in case another instance starts while validator is already running on one. Slashing!!
+# sudo systemctl enable prysmbeacon
+# sudo systemctl enable prysmvalidator
