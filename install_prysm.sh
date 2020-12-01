@@ -22,7 +22,7 @@ sudo ./prysm.sh validator accounts import --keys-dir=./validator_keys --accept-t
 sudo cp ./validator_keys/wallet_password.txt /var/lib/prysm/validator/wallet_password.txt
 sudo chown prysmvalidator:prysmvalidator /var/lib/prysm/validator/wallet_password.txt
 sudo chown -R prysmvalidator:prysmvalidator /var/lib/prysm/validator
-sudo chmod -R go-rw /var/lib/prysm/validator
+sudo chmod -R 0700 /var/lib/prysm/validator
 
 # Copy binaries to bin
 sudo cp dist/beacon*amd64 /usr/local/bin/beacon-chain
