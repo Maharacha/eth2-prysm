@@ -16,7 +16,7 @@ sudo mkdir -p /var/lib/prysm/validator
 sudo chown -R prysmvalidator:prysmvalidator /var/lib/prysm/validator
 
 # Import account
-sudo ./prysm.sh validator accounts import --keys-dir=./validator_keys --accept-terms-of-use --wallet-password-file ./validator_keys/wallet_password.txt --wallet-dir /var/lib/prysm/validator --account-password-file ./validator_keys/account_password.txt
+sudo ./prysm.sh validator accounts import --keys-dir=./validator_keys --accept-terms-of-use --pyrmont --wallet-password-file ./validator_keys/wallet_password.txt --wallet-dir /var/lib/prysm/validator --account-password-file ./validator_keys/account_password.txt
 
 # Copy wallet password file for validator to read
 sudo cp ./validator_keys/wallet_password.txt /var/lib/prysm/validator/wallet_password.txt
