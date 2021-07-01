@@ -6,12 +6,14 @@ curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.sh --out
 ./prysm.sh validator --download-only
 
 # Create beacon user and directory
-sudo useradd --no-create-home --shell /bin/false prysmbeacon
+sudo groupadd -g 1001 prysmbeacon
+sudo useradd -u 1001 -g 1001 --no-create-home --shell /bin/false prysmbeacon
 sudo mkdir -p /var/lib/prysm/beacon
 sudo chown -R prysmbeacon:prysmbeacon /var/lib/prysm/beacon
 
 # Create validator user and directory
-sudo useradd --no-create-home --shell /bin/false prysmvalidator
+sudo groupadd -g 1002 prysmvalidator
+sudo useradd -u 1002 -g 1002 --no-create-home --shell /bin/false prysmvalidator
 sudo mkdir -p /var/lib/prysm/validator
 sudo chown -R prysmvalidator:prysmvalidator /var/lib/prysm/validator
 
